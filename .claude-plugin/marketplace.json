@@ -1,0 +1,15 @@
+{
+  "name": "claude-editing-skills",
+  "owner": {
+    "name": "Ali Solanki",
+    "url": "https://alisolanki.com"
+  },
+  "description": "Ali Solanki's video editing skills for Claude Code.",
+  "plugins": [
+    {
+      "name": "editing-skills",
+      "source": "./",
+      "description": "Eleven local video editing skills, including five photographic styles with editable templates, image assets and moving previews."
+    }
+  ]
+}
