@@ -16,7 +16,7 @@ if [ ! -x "$KIT/.venv/bin/python" ]; then
   "$PY" -m venv "$KIT/.venv"
 fi
 "$KIT/.venv/bin/python" -m pip install -q --upgrade pip
-"$KIT/.venv/bin/python" -m pip install -q groq numpy pillow onnxruntime
+"$KIT/.venv/bin/python" -m pip install -q faster-whisper numpy pillow onnxruntime
 
 mkdir -p "$KIT/vendor"
 if [ ! -s "$KIT/vendor/gsap.min.js" ]; then
@@ -32,5 +32,5 @@ if [ "${1:-}" = "--cutout" ]; then
   "$KIT/.venv/bin/python" -c "import sys; sys.path.insert(0, '$KIT'); import cutout; cutout.model_path('mobilenetv3')"
 fi
 
-[ -n "${GROQ_API_KEY:-}" ] || echo "note: set GROQ_API_KEY (free at https://console.groq.com/keys) so clips can be transcribed"
+say "Transcrição local: use kit/transcribe-local.sh <video> [modelo] [idioma]"
 say "ready: $KIT/.venv/bin/python"
